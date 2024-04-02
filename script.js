@@ -32,19 +32,24 @@ let hpMeter=document.getElementById("hp-meter").value
 //assign them AP cost & HP damage
 
 function arcaneScepterAtk(event){
+    //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
-    let attackCost= 12;
+    let attackCostPoints= 12;
+    let apMeter= Number(document.getElementById("ap-meter").textContent);
     let hpDmg= 14;
+    
 
 
     //test to see if arcaneScepterAc works when clicked 
     console.log('Arcane Scepter Attack Cost:',attackCost);
     //test to see if arcaneScepterHpDmg works when clicked
     console.log('Arcane Scepter HP Damage:',hpDmg);
+    attackCost(attackCostPoints,apMeter)
 }
 
 
 function entangleAtk(event){
+    //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
     let attackCost= 23;
     let hpDmg=9;
@@ -54,10 +59,12 @@ function entangleAtk(event){
     console.log('Entangler Attack Cost:',attackCost);
     //test to see if entanglerHpDmg works when clicked
     console.log('Entangler HP Damage:',hpDmg);
+    attackCost(attackCost,apMeter)
 }
 
 
 function dragonBladeAtk(event){
+    //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
     let attackCost= 38;
     let hpDmg=47;
@@ -67,10 +74,12 @@ function dragonBladeAtk(event){
     console.log('Dragon Blade Attack Cost:',attackCost);
     //test to see if dragonBladeHpDmg works when clicked
     console.log('Dragon Blade HP Damage:',hpDmg);
+    attackCost(attackCost,apMeter)
 }
 
 
 function starFireAtk(event){
+    //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
     let attackCost= 33;
     let hpDmg=25;
@@ -80,11 +89,20 @@ function starFireAtk(event){
     console.log('Star Fire Attack Cost:',attackCost);
     //test to see if starFireHpDmg works when clicked
     console.log('Star Fire HP Damage:',hpDmg);
+    attackCost(attackCost,apMeter)
 }
 
-
-function attackCost(attackCost,hpMeter){
-    if (attackCost>hpMeter)
-    return 
+//create a function to subtract attack cost from the AP meter
+function attackCost(attackCostPoints,apMeter){
+  if (attackCostPoints<=apMeter){
+    apMeter-=attackCostPoints;
+    document.getElementById("ap-meter").value = apMeter;
+    console.log('Attack Points are being taken away!',apMeter);
+    return apMeter;
+} else {
+    console.log('Not Enough Attack Points :(',apMeter)
 
 }
+
+}
+
