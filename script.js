@@ -34,6 +34,7 @@ function arcaneScepterAtk(event){
     //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
     let attackCostPoints= 12;
+    // attackCost-=12;
     let apMeter= Number(document.getElementById("ap-meter").textContent);
     let hpDmg= 14;
     
@@ -44,6 +45,7 @@ function arcaneScepterAtk(event){
     //test to see if arcaneScepterHpDmg works when clicked
     console.log('Arcane Scepter HP Damage:',hpDmg);
     attackCost(attackCostPoints,apMeter)
+    hpCost(hpDmg,hpMeter)
 }
 
 
@@ -59,6 +61,9 @@ function entangleAtk(event){
     //test to see if entanglerHpDmg works when clicked
     console.log('Entangler HP Damage:',hpDmg);
     attackCost(attackCostPoints,apMeter)
+    hpCost(hpDmg,hpMeter)
+
+    
 }
 
 
@@ -74,6 +79,7 @@ function dragonBladeAtk(event){
     //test to see if dragonBladeHpDmg works when clicked
     console.log('Dragon Blade HP Damage:',hpDmg);
     attackCost(attackCostPoints,apMeter)
+    hpCost(hpDmg,hpMeter)
 }
 
 
@@ -89,6 +95,7 @@ function starFireAtk(event){
     //test to see if starFireHpDmg works when clicked
     console.log('Star Fire HP Damage:',hpDmg);
     attackCost(attackCostPoints,apMeter)
+    hpCost(hpDmg,hpMeter)
 }
 
 //create a function to subtract attack cost from the AP meter
@@ -104,4 +111,16 @@ function attackCost(attackCostPoints,apMeter){
 }
 
 }
-
+function hpCost(hpDmg,hpMeter){
+    if (hpDmg<=hpMeter){
+      hpMeter-=hpDmg;
+      document.getElementById("hp-meter").value = hpMeter;
+      console.log('Attack Points are being taken away!',hpMeter);
+      return hpMeter;
+  } else {
+      console.log('Not Enough Strong Enough :(',hpMeter)
+  
+  }
+  
+  }
+  
