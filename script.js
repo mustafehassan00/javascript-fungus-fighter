@@ -116,7 +116,7 @@ function hpCost(hpDmg,hpMeter){
     if (hpDmg<=hpMeter){
       hpMeter-=hpDmg;
       document.getElementById("hp-meter").value = hpMeter;
-      console.log('Helath Points are being taken away!',hpMeter);
+      console.log('Health Points are being taken away!',hpMeter);
       return hpMeter;
   } else {
       console.log('Not Enough Strong Enough :(',hpMeter)
