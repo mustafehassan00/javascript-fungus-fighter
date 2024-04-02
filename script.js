@@ -23,7 +23,6 @@
 // check to see if script is sourced and working.
 console.log('Js');
 //Global Variables
-let HP=100;
 let apMeter=document.getElementById("ap-meter").value
 
 let hpMeter=document.getElementById("hp-meter").value
@@ -41,7 +40,7 @@ function arcaneScepterAtk(event){
 
 
     //test to see if arcaneScepterAc works when clicked 
-    console.log('Arcane Scepter Attack Cost:',attackCost);
+    console.log('Arcane Scepter Attack Cost:',attackCostPoints);
     //test to see if arcaneScepterHpDmg works when clicked
     console.log('Arcane Scepter HP Damage:',hpDmg);
     attackCost(attackCostPoints,apMeter)
@@ -51,50 +50,50 @@ function arcaneScepterAtk(event){
 function entangleAtk(event){
     //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
-    let attackCost= 23;
+    let attackCostPoints= 23;
     let hpDmg=9;
 
     
     //test to see if entanglerAC works when Clicked
-    console.log('Entangler Attack Cost:',attackCost);
+    console.log('Entangler Attack Cost:',attackCostPoints);
     //test to see if entanglerHpDmg works when clicked
     console.log('Entangler HP Damage:',hpDmg);
-    attackCost(attackCost,apMeter)
+    attackCost(attackCostPoints,apMeter)
 }
 
 
 function dragonBladeAtk(event){
     //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
-    let attackCost= 38;
+    let attackCostPoints= 38;
     let hpDmg=47;
 
 
     //test to see if dragonBladeAc works when Clicked
-    console.log('Dragon Blade Attack Cost:',attackCost);
+    console.log('Dragon Blade Attack Cost:',attackCostPoints);
     //test to see if dragonBladeHpDmg works when clicked
     console.log('Dragon Blade HP Damage:',hpDmg);
-    attackCost(attackCost,apMeter)
+    attackCost(attackCostPoints,apMeter)
 }
 
 
 function starFireAtk(event){
     //set Variable values to the Attack Cost and the HP Dmg
     event.preventDefault()
-    let attackCost= 33;
+    let attackCostPoints= 33;
     let hpDmg=25;
 
 
     //test to see if starfireAC works when clicked 
-    console.log('Star Fire Attack Cost:',attackCost);
+    console.log('Star Fire Attack Cost:',attackCostPoints);
     //test to see if starFireHpDmg works when clicked
     console.log('Star Fire HP Damage:',hpDmg);
-    attackCost(attackCost,apMeter)
+    attackCost(attackCostPoints,apMeter)
 }
 
 //create a function to subtract attack cost from the AP meter
 function attackCost(attackCostPoints,apMeter){
-  if (attackCostPoints<=apMeter){
+  if (attackCostPoints>=apMeter){
     apMeter-=attackCostPoints;
     document.getElementById("ap-meter").value = apMeter;
     console.log('Attack Points are being taken away!',apMeter);
