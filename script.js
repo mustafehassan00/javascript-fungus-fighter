@@ -44,6 +44,7 @@ function arcaneScepterAtk(event){
     console.log('Arcane Scepter Attack Cost:',attackCostPoints);
     //test to see if arcaneScepterHpDmg works when clicked
     console.log('Arcane Scepter HP Damage:',hpDmg);
+    // console.log('Fungus Health:', (hpDmg,hpMeter));
     attackCost(attackCostPoints,apMeter)
     hpCost(hpDmg,hpMeter)
 }
