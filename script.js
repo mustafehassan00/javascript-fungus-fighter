@@ -33,51 +33,58 @@ let hpMeter=document.getElementById("hp-meter").value
 
 function arcaneScepterAtk(event){
     event.preventDefault()
-    let arcaneScepterAc= 12;
-    let arcaneScepterHpDmg= 14;
+    let attackCost= 12;
+    let hpDmg= 14;
 
 
     //test to see if arcaneScepterAc works when clicked 
-    console.log('Arcane Scepter Attack Cost:',arcaneScepterAc);
+    console.log('Arcane Scepter Attack Cost:',attackCost);
     //test to see if arcaneScepterHpDmg works when clicked
-    console.log('Arcane Scepter HP Damage:',arcaneScepterHpDmg);
+    console.log('Arcane Scepter HP Damage:',hpDmg);
 }
 
 
 function entangleAtk(event){
     event.preventDefault()
-    let entanglerAc= 23;
-    let entanglerHpDmg=9;
+    let attackCost= 23;
+    let hpDmg=9;
 
     
     //test to see if entanglerAC works when Clicked
-    console.log('Entangler Attack Cost:',entanglerAc);
+    console.log('Entangler Attack Cost:',attackCost);
     //test to see if entanglerHpDmg works when clicked
-    console.log('Entangler HP Damage:',entanglerHpDmg);
+    console.log('Entangler HP Damage:',hpDmg);
 }
 
 
 function dragonBladeAtk(event){
     event.preventDefault()
-    let dragonBladeAc= 38;
-    let dragonBladeHpDmg=47;
+    let attackCost= 38;
+    let hpDmg=47;
 
 
     //test to see if dragonBladeAc works when Clicked
-    console.log('Dragon Blade Attack Cost:',dragonBladeAc);
+    console.log('Dragon Blade Attack Cost:',attackCost);
     //test to see if dragonBladeHpDmg works when clicked
-    console.log('Dragon Blade HP Damage:',dragonBladeHpDmg);
+    console.log('Dragon Blade HP Damage:',hpDmg);
 }
 
 
 function starFireAtk(event){
     event.preventDefault()
-    let starFireAc= 33;
-    let starFireHpDmg=25;
+    let attackCost= 33;
+    let hpDmg=25;
 
 
     //test to see if starfireAC works when clicked 
-    console.log('Star Fire Attack Cost:',starFireAc);
+    console.log('Star Fire Attack Cost:',attackCost);
     //test to see if starFireHpDmg works when clicked
-    console.log('Star Fire HP Damage:',starFireHpDmg);
+    console.log('Star Fire HP Damage:',hpDmg);
+}
+
+
+function attackCost(attackCost,hpMeter){
+    if (attackCost>hpMeter)
+    return 
+
 }
